@@ -16,4 +16,3 @@ class DustSensor(object):
         self._serial_speed = serial_speed
         self._vetilation_gpio = ventilation_gpio
 
-    
