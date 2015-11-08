@@ -10,12 +10,12 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='dust-sensor',
+    name='django-dust-sensor',
     version='0.2.build_number',
     packages=['dust_sensor'],
     include_package_data=True,
     license='MIT License',  # example license
-    description='work with arduino dust sensor',
+    description='work with dust sensor connected via serial',
     long_description=README,
     url='https://webeye.services/',
     author='Václav Rak',

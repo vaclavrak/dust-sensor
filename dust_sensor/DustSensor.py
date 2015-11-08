@@ -58,6 +58,10 @@ class DustSensor(object):
         GPIO.output(self._ventilation_gpio, state)
 
     def read_data(self):
+        """
+        read data from dust sensor for time self._timeout count average RAW value and average value in ug/m2
+        :rtype: list [avg(raw), avg(units)]
+        """
         _serial = Serial(self._serial_port, self._serial_speed)
         if _serial.isOpen():
             _serial.close()
