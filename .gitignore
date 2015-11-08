@@ -56,3 +56,7 @@ docs/_build/
 # PyBuilder
 target/
 .idea/
+
+dust_sensor.egg-info/
+dist/
+venv/
