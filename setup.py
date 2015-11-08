@@ -14,8 +14,8 @@ setup(
     version='0.2.build_number',
     packages=['dust_sensor'],
     include_package_data=True,
-    license='MIT License',  # example license
-    description='work with dust sensor connected via serial',
+    license='MIT License',
+    description='django dust sensor celery based measure tool',
     long_description=README,
     url='https://webeye.services/',
     author='Václav Rak',
