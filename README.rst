@@ -2,14 +2,13 @@
 Django DUST sensor
 =====
 
-Read data from dust sensor connected via RPi Serial port. This is proprietary software for customized hardware used
-by WebEye.services
+Read data from dust sensor connected via RPi Serial port. This is proprietary software for customized hardware used by WebEye.services
 
 
 Quick start
 -----------
 
-1. Add "polls" to your INSTALLED_APPS setting like this::
+1. Add "dust_sensor" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = (
         ...

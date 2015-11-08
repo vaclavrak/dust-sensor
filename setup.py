@@ -11,10 +11,10 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='dust-sensor',
-    version='0.1',
+    version='0.2',
     packages=['dust_sensor'],
     include_package_data=True,
-    license='BSD License',  # example license
+    license='MIT License',  # example license
     description='work with arduino dust sensor',
     long_description=README,
     url='https://webeye.services/',
@@ -27,6 +27,6 @@ setup(
         'Framework :: Django',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 2.7'
     ],
 )

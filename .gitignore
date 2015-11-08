@@ -59,3 +59,4 @@ target/
 
 dust_sensor.egg-info/
 dist/
+venv/
