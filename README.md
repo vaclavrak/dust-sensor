@@ -1,4 +1,4 @@
-# dust-sensor
+# django-dust-sensor
 
 reading data from dust sensor and integrate it in django application. 
 
@@ -12,7 +12,7 @@ reading data from dust sensor and integrate it in django application.
  * for fluentd or td-agent  use handler name fluend.dust_sensor
  * for django human readable logger handler use django.dust_sensor
     
-### code
+### settings.py
     LOGGING = {
         'version': 1,
         'disable_existing_loggers': False,
