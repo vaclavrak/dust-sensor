@@ -75,16 +75,21 @@ class DustSensor(object):
         while (start_time + self._timeout) > datetime.now():
             try:
                 ch = _serial.readline().strip()
+
                 if ch == "0000":
                     self.state = "STARTING_VENTILATOR"
+                elif ch == "":
+                    i = 0
+                    continue
                 else:
                     self.state = "MEASURING"
                     if i == 0:
                         raw_value.append(float(ch))
                     if i == 1:
                         unit_value.append(float(ch))
-                    if i > 2 or ch.strip() == "":
+                    if i > 2:
                         i = 0
+                        continue
                     i += 1
                 self.state = "DONE"
             except OSError:
@@ -104,7 +109,7 @@ class DustSensor(object):
         return [avg_raw, avg_unit]
 
     def measure(self):
-        self.ventilation(1)
-        data = self.read_data()
         self.ventilation(0)
+        data = self.read_data()
+        self.ventilation(1)
         return data

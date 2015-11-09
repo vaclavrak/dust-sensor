@@ -1,4 +1,4 @@
 celery
 django
 td-logger
-
+pyserial
