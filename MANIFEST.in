@@ -1,4 +1,3 @@
 include LICENSE
 include README.rst
-recursive-include dust_sensor/static *
-recursive-include dust_sensor/templates *
+recursive-include dust_sensor/management *
