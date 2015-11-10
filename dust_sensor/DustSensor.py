@@ -14,7 +14,7 @@ from time import sleep, time
 from datetime import timedelta, datetime
 from logging import getLogger
 
-logger = getLogger("DustSensor")
+logger = getLogger("django.dust_sensor")
 
 
 class DustSensor(object):
