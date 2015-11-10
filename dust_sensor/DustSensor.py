@@ -83,13 +83,17 @@ class DustSensor(object):
                     continue
                 else:
                     self.state = "MEASURING"
-                    if i == 0:
-                        raw_value.append(float(ch))
-                    if i == 1:
-                        unit_value.append(float(ch))
-                    if i > 2:
-                        i = 0
-                        continue
+                    try:
+                        if i == 0:
+                            raw_value.append(float(ch))
+                        if i == 1:
+                            unit_value.append(float(ch))
+                        if i > 2:
+                            i = 0
+                            continue
+                    except ValueError,e:
+                        logger.exception(e)
+
                     i += 1
                 self.state = "DONE"
             except OSError:
