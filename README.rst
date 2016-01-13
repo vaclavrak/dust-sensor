@@ -4,6 +4,7 @@ Django DUST sensor
 
 Read data from dust sensor connected via RPi Serial port. This is proprietary software for customized hardware used by WebEye.services
 
+ - version 0.2.34 fixed avg_unit counting regarding http://www.howmuchsnow.com/arduino/airquality/
 
 Quick start
 -----------
