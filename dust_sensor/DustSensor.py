@@ -108,7 +108,10 @@ class DustSensor(object):
             raise Exception("Measurement was not successful, last state %s" % self.state)
 
         avg_raw = sum(raw_value) / float(len(raw_value))
-        avg_unit = sum(unit_value) / float(len(unit_value))
+        # regarding http://www.howmuchsnow.com/arduino/airquality/
+        # 0.172*x - 0.0999
+
+        avg_unit = (0.172*avg_raw) - 0.0999
 
         return [avg_raw, avg_unit]
 
