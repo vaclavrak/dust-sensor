@@ -52,7 +52,7 @@ reading data from dust sensor and integrate it in django application.
     }
 
 
-## setup CELERY BEAT scheduller (optional)
+## setup CELERY BEAT scheduler (optional)
 
     CELERYBEAT_SCHEDULE = {
         'refresh_dust_measure': {
