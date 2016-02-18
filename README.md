@@ -13,6 +13,7 @@ reading data from dust sensor and integrate it in django application.
  * for django human readable logger handler use django.dust_sensor
     
 ### settings.py
+```python
     LOGGING = {
         'version': 1,
         'disable_existing_loggers': False,
@@ -50,13 +51,16 @@ reading data from dust sensor and integrate it in django application.
             }
         },
     }
-
+```
 
 ## setup CELERY BEAT scheduler (optional)
 
+
+```python
     CELERYBEAT_SCHEDULE = {
         'refresh_dust_measure': {
             'task': 'dust_sensor.tasks.refresh_dust_measure',
             'schedule': timedelta(minutes=1)
         }
     }
+```
