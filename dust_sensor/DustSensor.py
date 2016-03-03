@@ -74,7 +74,7 @@ class DustSensor(object):
 
         while (start_time + self._timeout) > datetime.now():
             try:
-                ch = _serial.readline().strip()
+                ch = _serapt-gteial.readline().strip()
 
                 if ch == "0000":
                     self.state = "STARTING_VENTILATOR"
